@@ -1,27 +1,22 @@
 <script setup lang='ts'>
-    import { ref, onMounted} from 'vue';
-
-    const count = ref(0);
-
-    function increment() {
-        count.value++;
-    }
-
-    onMounted(() => {
-        console.log(`this initial count is ${count.value}.`);
-    });
+    //import { ref, onMounted} from 'vue';
+    import GamePanelHeader from './components/GamePanelHeader.vue';
+    import GamePanelScreen from './components/GamePanelScreen.vue';
+    import GamePanelFooter from './components/GamePanelFooter.vue';
+    
 </script>
 
 <template>
-    <button class="btn red" @click='increment'>Count is : {{ count }}</button>
+    <div class="container">
+        <!-- <LeftPane></LeftPane> -->
+        <div class="game-panel">
+            <GamePanelHeader></GamePanelHeader>
+            <GamePanelScreen></GamePanelScreen>
+            <GamePanelFooter></GamePanelFooter>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
-    .btn {
-        width: 120px;
 
-        &.red {
-            background: red;
-        }
-    }
 </style>
