@@ -20,8 +20,11 @@ module.exports = {
             },{
                 test: /\.scss$/,
                 use: [
+                    //cssを出力するための`loader`
                     'style-loader',
+                    //cssをJavaScriptに変換するための`loader`
                     'css-loader',
+                    //sassをコンパイルする`loader`
                     'sass-loader',
                 ]
             },{
